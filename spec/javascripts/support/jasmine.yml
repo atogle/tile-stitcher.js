@@ -11,8 +11,8 @@
 #   - dist/**/*.js
 #
 src_files:
-  - src/lib/minheap.js
-  - src/js/costdistance.js
+  - spec/javascripts/lib/jasmine.async.js
+  - src/js/tile-stitcher.js
 
 # stylesheets
 #

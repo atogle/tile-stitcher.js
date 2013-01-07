@@ -40,17 +40,17 @@ var tileStitcher = function(url, options){
   }
 
   // get an image for a given url
-  function getImage(url, callback) {
+  self._getImage = function(url, callback) {
     var imageObj = new Image();
     imageObj.onload = function() {
       callback(this);
     };
     imageObj.src = url;
-  }
+  };
 
   // draw an image in the right place on the new stitched canvas
   function drawImage(url, xIndex, yIndex, stitched, callback) {
-    getImage(url, function(img) {
+    self._getImage(url, function(img) {
       var w = img.width,
           h = img.height,
           ctx = stitched.getContext('2d');
