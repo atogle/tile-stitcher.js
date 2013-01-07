@@ -19,14 +19,17 @@ var tileStitcher = function(url, options){
 
   // http://mir.aculo.us/2011/03/09/little-helpers-a-tweet-sized-javascript-templating-engine/
   function t(s,d){
-    for(var p in d)
-      s=s.replace(new RegExp('{'+p+'}','g'), d[p]);
+    for(var p in d) {
+        s=s.replace(new RegExp('{'+p+'}','g'), d[p]);
+    }
     return s;
   }
 
   // http://underscorejs.org/docs/underscore.html
   function after(times, func) {
-    if (times <= 0) return func();
+    if (times <= 0) {
+      return func();
+    }
     return function() {
       if (--times < 1) {
         return func.apply(this, arguments);
